@@ -1,0 +1,35 @@
+{
+	"name": "geo-globe",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"description": "Any place on Earth as a terrain diorama on a compass plinth: live elevation, imagery, map lines, sun, moon and weather. A Three.js workshop demo.",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+	},
+	"devDependencies": {
+		"@fontsource-variable/figtree": "^5.3.0",
+		"@fontsource-variable/fraunces": "^5.3.0",
+		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/kit": "^2.63.0",
+		"@sveltejs/vite-plugin-svelte": "^7.1.2",
+		"@types/d3-interpolate": "^3.0.4",
+		"@types/three": "^0.186.0",
+		"svelte": "^5.56.1",
+		"svelte-check": "^4.6.0",
+		"typescript": "^6.0.3",
+		"vite": "^8.0.16"
+	},
+	"dependencies": {
+		"@mapbox/vector-tile": "^3.0.0",
+		"@threlte/core": "^8.6.1",
+		"@threlte/extras": "^9.22.0",
+		"d3-interpolate": "^3.0.1",
+		"pbf": "^5.1.2",
+		"three": "^0.186.1"
+	}
+}
