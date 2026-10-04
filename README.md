@@ -14,6 +14,8 @@ Built as a Three.js workshop demo, from the "globe" view of
 retrospective, with everything specific to that trip (the bike, routes, GPS tracks, photos,
 stories) taken out so the spectacle is all that's left.
 
+**Live: https://geo-globe-seven.vercel.app** (deployed by Vercel from `main`).
+
 ```sh
 npm install
 npm run dev          # http://localhost:5173
