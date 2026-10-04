@@ -49,6 +49,8 @@ export class App {
 
 	/** what's on the globe (null: the meadow, before any search) */
 	loaded = $state.raw<Loaded | null>(null);
+	/** the card with search and settings is open (folded: just a pill) */
+	controls = $state(true);
 	/** being fetched: the old land waits half sunk */
 	pending = $state(false);
 	error = $state<string | null>(null);

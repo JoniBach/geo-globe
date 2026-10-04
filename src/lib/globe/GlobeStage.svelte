@@ -36,12 +36,12 @@
 	// svelte-ignore state_referenced_locally — the first frame only; after that the viewer's orbit wins
 	const fit = Math.max(1, 1.25 / Math.max(0.3, width / height));
 
-	// phones: the card covers the top of the screen, so draw the globe lower down (a view offset
-	// shifts the picture without moving the camera, so turning the globe still pivots on its centre)
+	// phones: while the card is open it covers the top of the screen, so draw the globe lower down
+	// (a view offset shifts the picture without moving the camera: turning still pivots on the centre)
 	let camera = $state<PerspectiveCamera>();
 	$effect(() => {
 		if (!camera) return;
-		if (width < 700 && height > width) camera.setViewOffset(width, height, 0, -height * 0.16, width, height);
+		if (app.controls && width < 700 && height > width) camera.setViewOffset(width, height, 0, -height * 0.16, width, height);
 		else camera.clearViewOffset();
 	});
 
